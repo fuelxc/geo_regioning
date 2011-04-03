@@ -1,0 +1,1008 @@
+# Logfile created on Sun Apr 03 10:55:12 +1000 2011 by logger.rb/22285
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (36.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (324.7ms)[0m   [0;1mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `latitude` decimal(12,8), `longitude` decimal(12,8)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (21.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (213.1ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (20.0ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (281.5ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (12.7ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (157.4ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `latitude` decimal(12,8), `longitude` decimal(12,8)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (28.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (200.0ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `latitude` decimal(12,8), `longitude` decimal(12,8)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (63.2ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (35.9ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (73.7ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `latitude` decimal(12,8), `longitude` decimal(12,8)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (24.9ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;36;1mSQL (15.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (98.1ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (88.7ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (32.8ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (148.8ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (33.9ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (84.9ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mPlace Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `places`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (29.2ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (90.3ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (83.1ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (20.2ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (55.6ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (107.0ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.0ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (409.4ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mDROP TABLE `places`[0m
+  [4;35;1mSQL (99.6ms)[0m   [0mCREATE TABLE `places` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `address` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `geo_precision` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mGeoRegioning::Country Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'geo_regioning_plugin_test.countries' doesn't exist: SHOW FIELDS FROM `countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (21.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (107.8ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mMysql::Error: Key column 'parent_id' doesn't exist in table: CREATE INDEX `country_parent_idx` ON `geo_regioning_countries` (`parent_id`)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (98.4ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (155.7ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (207.4ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (141.2ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (157.3ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (155.8ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (172.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (146.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (119.1ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (104.9ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (131.7ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mGeoRegioning::Country Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'geo_regioning_plugin_test.countries' doesn't exist: SHOW FIELDS FROM `countries`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (38.7ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (53.6ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (124.7ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (116.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (130.1ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (100.0ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mMysql::Error: Table 'geo_regioning_postcodes' already exists: CREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (74.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (149.0ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (122.2ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (173.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (139.1ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (113.7ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (114.2ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (117.0ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (164.2ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (107.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (108.6ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (105.2ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `schema_migrations`[0m
+  [4;36;1mSQL (111.3ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (23.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('0')[0m
+  [4;36;1mGeoRegioning::Country Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (51.2ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (17.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (117.8ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (172.3ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (108.2ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (117.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (180.0ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (165.8ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (128.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (110.2ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.6ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (111.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (120.5ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (133.2ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (24.9ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (128.4ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (129.1ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (102.5ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (106.1ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (116.8ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (141.4ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (126.7ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (168.5ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (115.9ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (122.8ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (164.1ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (129.4ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.1ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (135.9ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (126.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (110.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (142.0ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (137.1ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (118.2ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (163.8ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (106.2ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (124.8ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (22.8ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mGeoRegioning::Level Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'geo_regioning_plugin_test.geo_regioning_level' doesn't exist: SHOW FIELDS FROM `geo_regioning_level`[0m
+  [4;35;1mGeoRegioning::Postcode Columns (0.0ms)[0m   [0mMysql::Error: Table 'geo_regioning_plugin_test.geo_regioning_postcode' doesn't exist: SHOW FIELDS FROM `geo_regioning_postcode`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (96.5ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (117.8ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (100.8ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (102.5ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (100.7ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (119.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (119.2ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (107.9ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (111.0ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.3ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (109.7ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (108.1ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (96.9ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (137.0ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (123.4ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (106.7ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (134.5ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (147.0ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (107.2ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (95.6ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (100.5ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (119.4ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (102.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (102.9ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (98.7ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (94.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (103.6ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (101.1ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (93.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mGeoRegioning::Level Columns (19.4ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;35;1mGeoRegioning::Postcode Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (18.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (106.9ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (283.5ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (162.1ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (114.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (144.7ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (92.4ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (124.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (112.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (101.7ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (101.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (120.2ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (100.3ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (86.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (118.7ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (91.4ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (177.3ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (102.6ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (97.1ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (94.9ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (93.6ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (160.5ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (24.9ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (148.5ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (180.4ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (183.6ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (103.3ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (120.3ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (90.7ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (94.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (110.5ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (91.1ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (95.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (103.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (150.4ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (86.4ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (94.3ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (99.3ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.2ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES(NULL, '2011-04-03 06:48:44', NULL, NULL, '2011-04-03 06:48:44', 'AU', NULL)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (97.4ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (140.1ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (115.3ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (124.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (101.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (117.6ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (109.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (110.5ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.5ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (103.7ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (120.3ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (107.2ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (92.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (110.6ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (108.5ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (113.5ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (110.3ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (139.3ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (127.5ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (108.9ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (127.2ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (119.0ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (87.7ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (99.1ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (95.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (111.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (100.9ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (92.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (112.6ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (107.2ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (93.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (118.4ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (107.9ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.2ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES(NULL, '2011-04-03 06:49:44', NULL, NULL, '2011-04-03 06:49:44', 'AU', NULL)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (33.6ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (32.1ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (108.2ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (101.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (113.0ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (108.1ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (100.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.9ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (103.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (101.3ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.7ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (101.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (110.7ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (108.3ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (99.6ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (108.3ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (92.5ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (112.3ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (103.6ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (111.1ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (109.2ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.5ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (111.8ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (107.1ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (105.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (108.4ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (109.1ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (101.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (111.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.5ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (101.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (110.8ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (100.0ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.2ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES(NULL, '2011-04-03 06:50:24', NULL, NULL, '2011-04-03 06:50:24', 'AU', NULL)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.1ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (164.8ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (100.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (112.1ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (98.5ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (94.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (102.9ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (93.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (111.2ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.1ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (95.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (99.7ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (142.4ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (105.1ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (130.2ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (101.5ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (86.7ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (112.3ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (107.4ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (102.1ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (123.0ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (20.7ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (437.4ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (55.7ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (102.3ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (107.9ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (105.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (52.5ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (104.0ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (15.1ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (41.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (105.9ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (103.8ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (98.6ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.2ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES(NULL, '2011-04-03 06:50:49', NULL, NULL, '2011-04-03 06:50:49', 'AU', NULL)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (5.0ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (52.6ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (81.4ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (120.0ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (99.5ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (95.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (109.2ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (100.2ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (94.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (111.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (98.6ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (114.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.4ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (107.9ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (95.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (102.6ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (109.1ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (128.0ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (119.0ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (146.2ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (149.1ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (335.3ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (84.5ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (101.9ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (110.8ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (107.0ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (95.4ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (102.6ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (99.9ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (113.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (115.2ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (95.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (102.4ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (92.1ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (85.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (104.5ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (97.4ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (22.7ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.3ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES('Australia', '2011-04-03 06:53:52', NULL, NULL, '2011-04-03 06:53:52', 'AU', NULL)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (3.7ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (32.3ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (49.7ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (128.7ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (98.6ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (94.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (90.5ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (85.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (93.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (91.8ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (86.1ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (93.4ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (90.5ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (70.8ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (103.5ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (91.1ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (86.2ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (127.7ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (92.2ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (86.0ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (91.0ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (86.3ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (95.7ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (82.1ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (84.9ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (93.8ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (86.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (94.3ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (91.9ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (85.5ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (94.6ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (99.1ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.0ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.7ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (101.5ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.3ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES('Australia', '2011-04-03 06:55:51', NULL, 133.775136, '2011-04-03 06:55:51', 'AU', -25.274398)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (221.7ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (233.4ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (121.6ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (106.7ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (101.9ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (110.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (107.4ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (103.4ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (101.8ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.2ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (103.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (110.8ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (108.2ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mDROP TABLE `geo_regioning_countries`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (113.4ms)[0m   [0;1mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (108.6ms)[0m   [0;1mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_levels`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.4ms)[0m   [0mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (104.3ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;35;1mSQL (99.3ms)[0m   [0mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (101.1ms)[0m   [0mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;35;1mSQL (108.9ms)[0m   [0mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (108.4ms)[0m   [0mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (110.7ms)[0m   [0mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mDROP TABLE `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (93.2ms)[0m   [0mCREATE TABLE `geo_regioning_countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `iso_3166` varchar(255) NOT NULL, `name` varchar(255), `iso_currency_code` varchar(255), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (111.7ms)[0m   [0mCREATE INDEX `country_iso_idx` ON `geo_regioning_countries` (`iso_3166`)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `geo_regioning_countries`[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mCREATE INDEX `country_geo_idx` ON `geo_regioning_countries` (`geo_latitude`, `geo_longitude`)[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mDROP TABLE `geo_regioning_levels`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (101.6ms)[0m   [0;1mCREATE TABLE `geo_regioning_levels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `long_name` varchar(255), `short_name` varchar(255), `long_code` varchar(255), `short_code` varchar(255), `parent_type` int(11), `parent_id` int(11), `depth` int(11) DEFAULT 1 NOT NULL, `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (111.2ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_levels` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_levels`[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE INDEX `level_geo_idx` ON `geo_regioning_levels` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mDROP TABLE `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (101.2ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcodes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `parent_type` varchar(255), `parent_id` int(11), `geo_latitude` decimal(12,8), `geo_longitude` decimal(12,8), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (110.9ms)[0m   [0;1mCREATE INDEX `level_parent_idx` ON `geo_regioning_postcodes` (`parent_id`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcodes`[0m
+  [4;36;1mSQL (108.6ms)[0m   [0;1mCREATE INDEX `postcode_geo_idx` ON `geo_regioning_postcodes` (`geo_latitude`, `geo_longitude`)[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mDROP TABLE `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (102.3ms)[0m   [0;1mCREATE TABLE `geo_regioning_postcode_maps` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `postcode_id` int(11), `postcodable_id` int(11), `postcodable_type` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (126.9ms)[0m   [0;1mCREATE INDEX `postcode_idx` ON `geo_regioning_postcode_maps` (`postcode_id`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `geo_regioning_postcode_maps`[0m
+  [4;36;1mSQL (109.7ms)[0m   [0;1mCREATE INDEX `postcodable_idx` ON `geo_regioning_postcode_maps` (`postcodable_id`, `postcodable_type`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mGeoRegioning::Country Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_countries`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mGeoRegioning::Country Create (0.3ms)[0m   [0mINSERT INTO `geo_regioning_countries` (`name`, `created_at`, `iso_currency_code`, `geo_longitude`, `updated_at`, `iso_3166`, `geo_latitude`) VALUES('Australia', '2011-04-03 06:56:57', NULL, 133.775136, '2011-04-03 06:56:57', 'AU', -25.274398)[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mGeoRegioning::Level Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `geo_regioning_levels`[0m
+  [4;36;1mGeoRegioning::Postcode Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `geo_regioning_postcodes`[0m
