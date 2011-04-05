@@ -8,4 +8,13 @@ end
 
 #Make the models happy
 class GeoRegioning
+  @@config = {}
+
+  def self.config=(config)
+    @@config = config
+  end
+
+  def self.config
+    @@config
+  end
 end

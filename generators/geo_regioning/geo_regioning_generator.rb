@@ -3,6 +3,7 @@ class GeoRegioningGenerator < Rails::Generator::NamedBase
     record do |m|
       # m.directory "lib"
       # m.template 'README', "README"
+      #m.geo_regioning_config
     end
   end
 end

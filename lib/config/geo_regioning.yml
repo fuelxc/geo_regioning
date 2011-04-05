@@ -1,0 +1,23 @@
+AU:
+  1:
+    name: state
+  2:
+    name: city
+    hidden: true
+  3:
+    name: suburb
+US:
+  1:
+    name: state
+  2:
+    name: county
+    hidden: true
+  3:
+    name: city
+CA:
+  1:
+    name: province
+  2:
+    name: region
+  3:
+    name: city

@@ -7,4 +7,8 @@ class GeoRegioning::Base < ActiveRecord::Base
                    :lat_column_name     => :geo_latitude,
                    :lng_column_name     => :geo_longitude,
                    :auto_geocode        => true
+
+  def lat_long
+    [self.geo_latitude, self.geo_longitude]
+  end
 end

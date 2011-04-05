@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 0) do
       t.integer :parent_type
       t.integer :parent_id
       t.integer :depth, :length => 2, :null => false, :default => 1
+      t.integer :country_id, :null => false
       t.decimal   :geo_latitude,                            :precision => 12, :scale => 8
       t.decimal   :geo_longitude,                           :precision => 12, :scale => 8
       t.timestamps
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string  :code, :length => 12
     t.string  :parent_type
     t.integer :parent_id
+    t.integer :country_id
     t.decimal   :geo_latitude,                            :precision => 12, :scale => 8
     t.decimal   :geo_longitude,                           :precision => 12, :scale => 8
     t.timestamps

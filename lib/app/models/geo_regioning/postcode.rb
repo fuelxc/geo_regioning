@@ -1,13 +1,10 @@
 class GeoRegioning::Postcode < GeoRegioning::Base
   set_table_name 'geo_regioning_postcodes'
-  has_many :postcode_maps
+  has_many :postcode_maps, :class_name => 'GeoRegioning::PostcodeMap'
+  belongs_to :country, :class_name => 'GeoRegioning::Country'
 
   def address
-    [self.country, self.code].compact.join(',')
-  end
-
-  def country
-    self.postcode_maps.first.postcodable.country
+    [self.code, self.country.try(:address)].compact.join(',')
   end
 
 end
