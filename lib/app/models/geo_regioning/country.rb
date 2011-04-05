@@ -1,6 +1,7 @@
 class GeoRegioning::Country < GeoRegioning::Base
   set_table_name 'geo_regioning_countries'
-  has_many :levels, :as => :parent
+  has_many :levels, :as => :parent, :dependent => :destroy
+  has_many :postcodes, :dependent => :destroy
   has_many :levels, :class_name => 'GeoRegioning::Level'
 
   before_validation :upcase_iso_3166

@@ -27,7 +27,7 @@ class GeoRegioning::Level < GeoRegioning::Base
   end
 
   def address
-    if GeoRegioning.config[self.country.iso_3166][self.depth]['hidden']
+    if GeoRegioning.config[self.country.iso_3166][self.depth]['exclude_from_geocode']
       self.parent.address
     else
       [(self.long_name || self.short_name), self.parent.address].compact.join(', ')
