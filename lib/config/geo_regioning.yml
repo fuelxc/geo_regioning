@@ -3,7 +3,7 @@ AU:
     name: state
   2:
     name: city
-    hidden: true
+    exclude_from_geocode: true
   3:
     name: suburb
 US:
@@ -11,7 +11,7 @@ US:
     name: state
   2:
     name: county
-    hidden: true
+    exclude_from_geocode: true
   3:
     name: city
 CA:
