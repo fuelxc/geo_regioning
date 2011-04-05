@@ -1,4 +1,5 @@
 class GeoRegioning::Base < ActiveRecord::Base
+  self.abstract_class = true
   include Geokit
   #TODO: config the default units and formula
   acts_as_mappable :default_units       => :miles,
