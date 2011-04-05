@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 0) do
       t.string  :short_name, :length => 10
       t.string  :long_code
       t.string  :short_code, :length => 2
-      t.integer :parent_type
+      t.string :parent_type
       t.integer :parent_id
       t.integer :depth, :length => 2, :null => false, :default => 1
       t.integer :country_id, :null => false

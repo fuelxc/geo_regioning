@@ -10,5 +10,9 @@ class GeoRegioningPostcodeTest < Test::Unit::TestCase
     level.postcodes << postcode
 
     assert_not_nil level.postcodes
+    
+    country.destroy
+    level.destroy
+    postcode.destroy
   end
 end

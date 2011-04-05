@@ -3,8 +3,10 @@ class GeoRegioning::Country < GeoRegioning::Base
   has_many :levels, :as => :parent
   has_many :levels, :class_name => 'GeoRegioning::Level'
 
+  before_validation :upcase_iso_3166
 
   validates_presence_of :iso_3166
+  validates_uniqueness_of :iso_3166
 
   @level_name_depth_map = {}
 
@@ -27,5 +29,9 @@ class GeoRegioning::Country < GeoRegioning::Base
     end
   end
 
+  private
+  def upcase_iso_3166
+    self.iso_3166 = self.iso_3166.upcase
+  end
   
 end

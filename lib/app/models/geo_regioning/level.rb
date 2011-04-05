@@ -17,6 +17,15 @@ class GeoRegioning::Level < GeoRegioning::Base
   validates_presence_of :parent
   validates_presence_of :depth
 
+  @level_name_depth_map = {}
+
+  def level_name_depth_map
+    @level_name_depth_map if @level_name_depth_map
+    levels_hash = {}
+    GeoRegioning.config[self.country.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config[self.country.iso_3166][key]['name']] = key}
+    @level_name_depth_map = levels_hash
+  end
+
   def address
     if GeoRegioning.config[self.country.iso_3166][self.depth]['hidden']
       self.parent.address
@@ -40,6 +49,29 @@ class GeoRegioning::Level < GeoRegioning::Base
     unless self.country
       this_country = self.parent.class == GeoRegioning::Country ? self.parent : self.parent.country
       self.country = this_country
+    end
+  end
+
+  def method_missing(method, *args, &block)
+    if level_name_depth_map.keys.include?(method.to_s.singularize)
+      depth = level_name_depth_map[method.to_s.singularize]
+      num_calls = (depth - self.depth).abs
+      if self.depth < depth
+        #children
+        @items = [self]
+        #TODO: make this sql based of id IN(select ID .....)
+        num_calls.times do
+          @items = @items.collect(&:children).flatten rescue []
+        end
+        return @items
+      elsif self.depth > depth
+        #parent
+        return eval("self#{'.parent'*num_calls}")
+      else
+        super
+      end
+    else
+      super
     end
   end
 end
