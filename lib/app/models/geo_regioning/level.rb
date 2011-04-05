@@ -10,7 +10,12 @@ class GeoRegioning::Level < GeoRegioning::Base
 
   named_scope :of_depth, lambda{ |depth| { :conditions => { :depth => depth } } }
 
+  before_validation :set_country
+  before_validation :set_depth
+
   validates_presence_of :country
+  validates_presence_of :parent
+  validates_presence_of :depth
 
   def address
     if GeoRegioning.config[self.country.iso_3166][self.depth]['hidden']
@@ -24,4 +29,17 @@ class GeoRegioning::Level < GeoRegioning::Base
     self.class.find(:all, :origin => self.lat_long, :within => distance, :conditions => {:depth => self.depth})
   end
 
+  private
+  def set_depth
+    if self.parent.respond_to?(:depth)
+      self.depth = self.parent.depth + 1
+    end
+  end
+
+  def set_country
+    unless self.country
+      this_country = self.parent.class == GeoRegioning::Country ? self.parent : self.parent.country
+      self.country = this_country
+    end
+  end
 end
