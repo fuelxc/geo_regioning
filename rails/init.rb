@@ -15,6 +15,12 @@ Geokit::Geocoders::google                 = GeoRegioning.config['geokit_options'
 Geokit::Geocoders::geocoder_us            = GeoRegioning.config['geokit_options']['geocoder_us'] rescue false
 Geokit::Geocoders::geocoder_ca            = GeoRegioning.config['geokit_options']['geocoder_ca'] rescue false
 Geokit::Geocoders::provider_order         = GeoRegioning.config['geokit_options']['provider_order'] rescue []
-Geokit::Geocoders::request_timeout        = GeoRegioning.config['geokit_options']['request_timeout'] rescue 3
+## there is timeout and request timeout depending on the gem version:
+if Geokit::Geocoders.respond_to?(:request_timeout)
+  Geokit::Geocoders::request_timeout        = GeoRegioning.config['geokit_options']['request_timeout'] rescue 3
+else
+  Geokit::Geocoders::timeout        = GeoRegioning.config['geokit_options']['request_timeout'] rescue 3
+end
+
 Geokit::default_units                     = GeoRegioning.config['geokit_options']['units'] rescue :miles
 Geokit::default_formula                   = GeoRegioning.config['geokit_options']['formula'] rescue :sphere
