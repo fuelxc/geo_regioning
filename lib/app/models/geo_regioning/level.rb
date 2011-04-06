@@ -22,12 +22,12 @@ class GeoRegioning::Level < GeoRegioning::Base
   def level_name_depth_map
     @level_name_depth_map if @level_name_depth_map
     levels_hash = {}
-    GeoRegioning.config[self.country.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config[self.country.iso_3166][key]['name']] = key}
+    GeoRegioning.config['country_definitions'][self.country.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config['country_definitions'][self.country.iso_3166][key]['name']] = key}
     @level_name_depth_map = levels_hash
   end
 
   def address
-    if GeoRegioning.config[self.country.iso_3166][self.depth]['exclude_from_geocode']
+    if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]['exclude_from_geocode']
       self.parent.address
     else
       [(self.long_name || self.short_name), self.parent.address].compact.join(', ')

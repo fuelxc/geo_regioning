@@ -18,7 +18,7 @@ class GeoRegioning::Country < GeoRegioning::Base
   def level_name_depth_map
     @level_name_depth_map if @level_name_depth_map
     levels_hash = {}
-    GeoRegioning.config[self.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config[self.iso_3166][key]['name']] = key}
+    GeoRegioning.config['country_definitions'][self.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config['country_definitions'][self.iso_3166][key]['name']] = key}
     @level_name_depth_map = levels_hash
   end
 
