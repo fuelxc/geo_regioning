@@ -249,6 +249,10 @@ module Geokit
           units = extract_units_from_options(options)
           formula = extract_formula_from_options(options)
           bounds = extract_bounds_from_options(options)
+          
+          #set the right table name
+          self.qualified_lat_column_name = "#{table_name}.#{lat_column_name}"
+          self.qualified_lng_column_name = "#{table_name}.#{lng_column_name}"
 
           # Only proceed if this is a geokit-related query
           if origin || bounds
