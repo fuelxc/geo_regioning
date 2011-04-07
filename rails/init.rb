@@ -23,5 +23,5 @@ else
   Geokit::Geocoders::timeout        = GeoRegioning.config['geokit_options']['request_timeout'] rescue 3
 end
 
-Geokit::default_units                     = GeoRegioning.config['geokit_options']['units'] rescue :miles
-Geokit::default_formula                   = GeoRegioning.config['geokit_options']['formula'] rescue :sphere
+Geokit::default_units                     = GeoRegioning.config['geokit_options']['units'].to_sym rescue :miles
+Geokit::default_formula                   = GeoRegioning.config['geokit_options']['formula'].to_sym rescue :sphere
