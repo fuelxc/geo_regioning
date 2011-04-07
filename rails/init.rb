@@ -1,4 +1,5 @@
 # Include hook code here
+require 'active_support'
 require 'geokit-rails'
 require 'geo_regioning'
 

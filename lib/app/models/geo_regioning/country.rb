@@ -1,8 +1,9 @@
 class GeoRegioning::Country < GeoRegioning::Base
   set_table_name 'geo_regioning_countries'
-  has_many :levels, :as => :parent, :dependent => :destroy
-  has_many :postcodes, :dependent => :destroy
-  has_many :levels, :class_name => 'GeoRegioning::Level'
+  
+  has_many :children, :as => :parent, :class_name => 'GeoRegioning::Level'
+  has_many :postcodes, :dependent => :destroy, :class_name => 'GeoRegioning::Postcode'
+  has_many :levels, :dependent => :destroy, :class_name => 'GeoRegioning::Level'
 
   before_validation :upcase_iso_3166
 
@@ -22,17 +23,21 @@ class GeoRegioning::Country < GeoRegioning::Base
     @level_name_depth_map = levels_hash
   end
 
+  private
   def method_missing(method, *args, &block)
-    if level_name_depth_map.keys.include?(method.to_s.singularize)
+    #AR lazy loads the accessor methods so punt to super if we ever make it here
+    if self.attributes.keys.include?(method.to_s)
+      super
+    elsif level_name_depth_map.keys.include?(method.to_s.singularize)
       self.levels.of_depth(level_name_depth_map[method.to_s.singularize])
     else
       super
     end
   end
 
-  private
   def upcase_iso_3166
     self.iso_3166 = self.iso_3166.upcase
   end
   
 end
+

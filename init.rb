@@ -1,2 +1,1 @@
-require 'geokit-rails'
-require 'geo_regioning'
+require File.join(File.dirname(__FILE__), 'rails', 'init')
