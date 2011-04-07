@@ -56,12 +56,20 @@ class GeoRegioning::Level < GeoRegioning::Base
     if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]['exclude_from_geocode']
       self.parent.address
     else
-      [(self.long_name || self.short_name), self.parent.address].compact.join(', ')
+      [self.name, self.parent.address].compact.join(', ')
     end
   end
 
   def others_within(distance)
     self.class.find(:all, :origin => self.lat_long, :within => distance, :conditions => {:depth => self.depth})
+  end
+  
+  def name 
+    self.long_name || self.short_name
+  end
+  
+  def code
+    self.long_code || self.short_code
   end
 
   private
