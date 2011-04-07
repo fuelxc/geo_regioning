@@ -11,16 +11,16 @@ class GeoRegioning::Level < GeoRegioning::Base
   named_scope :of_depth, lambda{ |depth| { :conditions => { :depth => depth } } }
   named_scope :descendents_deeper_for, lambda{ |deeper,parent| 
     subquery = self.send(:construct_finder_sql,
-      :select => "id",
+      :select => "geo_regioning_levels.id",
       :conditions => {:parent_type => parent.class.name, :parent_id => parent.id}
     )
     (deeper - 1).times do
       subquery = self.send(:construct_finder_sql,
-        :select => "id",
-        :conditions => ["parent_type = ? AND parent_id IN ( #{subquery} )", 'GeoRegioning::Level']
+        :select => "geo_regioning_levels.id",
+        :conditions => ["geo_regioning_levels.parent_type = ? AND geo_regioning_levels.parent_id IN ( #{subquery} )", 'GeoRegioning::Level']
       )
     end
-    {:conditions => "id IN ( #{subquery} )"}
+    {:conditions => "geo_regioning_levels.id IN ( #{subquery} )"}
   }
 
   before_validation :set_country
