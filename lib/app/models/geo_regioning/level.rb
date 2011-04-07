@@ -9,6 +9,19 @@ class GeoRegioning::Level < GeoRegioning::Base
   belongs_to :country, :class_name => 'GeoRegioning::Country'
 
   named_scope :of_depth, lambda{ |depth| { :conditions => { :depth => depth } } }
+  named_scope :descendents_deeper_for, lambda{ |deeper,parent| 
+    subquery = self.send(:construct_finder_sql,
+      :select => "id",
+      :conditions => {:parent_type => parent.class.name, :parent_id => parent.id}
+    )
+    (deeper - 1).times do
+      subquery = self.send(:construct_finder_sql,
+        :select => "id",
+        :conditions => ["parent_type = ? AND parent_id IN ( #{subquery} )", 'GeoRegioning::Level']
+      )
+    end
+    {:conditions => "id IN ( #{subquery} )"}
+  }
 
   before_validation :set_country
   before_validation :set_depth
@@ -58,12 +71,11 @@ class GeoRegioning::Level < GeoRegioning::Base
       num_calls = (depth - self.depth).abs
       if self.depth < depth
         #children
-        @items = [self]
-        #TODO: make this sql based of id IN(select ID .....)
-        num_calls.times do
-          @items = @items.collect(&:children).flatten rescue []
+        if num_calls == 1
+          self.children
+        else
+          self.class.descendents_deeper_for(num_calls, self)
         end
-        return @items
       elsif self.depth > depth
         #parent
         return eval("self#{'.parent'*num_calls}")
