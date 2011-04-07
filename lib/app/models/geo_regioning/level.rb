@@ -31,8 +31,8 @@ class GeoRegioning::Level < GeoRegioning::Base
   }
   
   named_scope :find_like_name_and_postcode, lambda{|name,postcode|
-    :joins => :postcodes,
-    :conditions => ["geo_regioning_levels.name LIKE ? AND geo_regioning_postcodes.code = ?", "#{name}%", postcode]
+    {:joins => :postcodes,
+    :conditions => ["geo_regioning_levels.name LIKE ? AND geo_regioning_postcodes.code = ?", "#{name}%", postcode]}
   }
 
   before_validation :set_country
