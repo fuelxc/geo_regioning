@@ -86,6 +86,11 @@ class GeoRegioning::Level < GeoRegioning::Base
   def code
     self.long_code || self.short_code
   end
+  
+  def toplevel
+    num_calls = (1 - self.depth)
+    eval("self#{'.parent'*num_calls}")
+  end
 
   private
   def set_depth
