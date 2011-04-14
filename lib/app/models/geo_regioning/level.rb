@@ -29,7 +29,7 @@ class GeoRegioning::Level < GeoRegioning::Base
       :conditions => ['(geo_regioning_levels.long_name = ? OR geo_regioning_levels.short_name = ?) AND geo_regioning_postcodes.code = ?', name, name, postcode]
     }
   }
-  named_scope :find_by_postcode_and_name lambda{|postcode,name|
+  named_scope :find_by_postcode_and_name, lambda{|postcode,name|
     find_by_name_and_postcode(name,postcode)
   }
   
@@ -51,7 +51,7 @@ class GeoRegioning::Level < GeoRegioning::Base
     {:joins => :postcodes,
     :conditions => ["(geo_regioning_levels.long_name LIKE ? OR geo_regioning_levels.short_name LIKE ?) AND geo_regioning_postcodes.code = ?", name, name, postcode]}
   }
-  named_scope :find_like_postcode_and_name lambda{|postcode,name|
+  named_scope :find_like_postcode_and_name, lambda{|postcode,name|
     find_like_name_and_postcode(name,postcode)
   }
   
