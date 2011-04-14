@@ -1,4 +1,16 @@
-# Include hook code here
+require 'awesome_nested_set'
+
+ActiveRecord::Base.class_eval do
+  include CollectiveIdea::Acts::NestedSet
+end
+
+if defined?(ActionView)
+  require 'awesome_nested_set/helper'
+  ActionView::Base.class_eval do
+    include CollectiveIdea::Acts::NestedSet::Helper
+  end
+end
+
 require 'active_support'
 require 'geokit-rails'
 require 'geo_regioning'

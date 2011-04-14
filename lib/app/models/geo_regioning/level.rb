@@ -1,10 +1,12 @@
 class GeoRegioning::Level < GeoRegioning::Base
   set_table_name 'geo_regioning_levels'
+  
+  acts_as_nested_set
 
   has_many :postcode_maps, :as => :postcodable, :class_name => 'GeoRegioning::PostcodeMap'
   has_many :postcodes, :through => :postcode_maps, :class_name => 'GeoRegioning::Postcode'
-  belongs_to :parent, :polymorphic => true, :counter_cache => true
-  has_many :levels, :as => :parent, :class_name => 'GeoRegioning::Level'
+  belongs_to :parent, :class_name => 'GeoRegioning::Level', :counter_cache => true
+  has_many :children, :class_name => 'GeoRegioning::Level', :foreign_key=> 'parent_id'
 
   belongs_to :country, :class_name => 'GeoRegioning::Country'
 
@@ -12,12 +14,12 @@ class GeoRegioning::Level < GeoRegioning::Base
   named_scope :descendents_deeper_for, lambda{ |deeper,parent| 
     subquery = self.send(:construct_finder_sql,
       :select => "geo_regioning_levels.id",
-      :conditions => {:parent_type => parent.class.name, :parent_id => parent.id}
+      :conditions => {:parent_id => parent.id}
     )
     (deeper - 1).times do
       subquery = self.send(:construct_finder_sql,
         :select => "geo_regioning_levels.id",
-        :conditions => ["geo_regioning_levels.parent_type = ? AND geo_regioning_levels.parent_id IN ( #{subquery} )", 'GeoRegioning::Level']
+        :conditions => ["geo_regioning_levels.parent_id IN ( #{subquery} )", 'GeoRegioning::Level']
       )
     end
     {:conditions => "geo_regioning_levels.id IN ( #{subquery} )"}
@@ -67,7 +69,6 @@ class GeoRegioning::Level < GeoRegioning::Base
   before_validation :set_depth
 
   validates_presence_of :country
-  validates_presence_of :parent
   validates_presence_of :depth
 
   @level_name_depth_map = {}
@@ -81,9 +82,9 @@ class GeoRegioning::Level < GeoRegioning::Base
 
   def address
     if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]['exclude_from_geocode']
-      self.parent.address
+      self.parent.try(:address)
     else
-      [self.name, self.parent.address].compact.join(', ')
+      [self.name, self.parent.try(:address), self.country.address].compact.join(', ')
     end
   end
 
@@ -112,9 +113,8 @@ class GeoRegioning::Level < GeoRegioning::Base
   end
 
   def set_country
-    unless self.country
-      this_country = self.parent.class == GeoRegioning::Country ? self.parent : self.parent.country
-      self.country = this_country
+    unless self.country 
+      self.country = self.parent.try(:country)
     end
   end
 

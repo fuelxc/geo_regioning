@@ -16,7 +16,6 @@ class CreateGeoTables < ActiveRecord::Migration
       t.string  :short_name, :length => 10
       t.string  :long_code
       t.string  :short_code, :length => 2
-      t.string  :parent_type
       t.integer :parent_id
       t.integer :depth, :length => 2, :null => false, :default => 1
       t.integer :country_id, :null => false
@@ -24,18 +23,17 @@ class CreateGeoTables < ActiveRecord::Migration
       t.decimal   :geo_longitude,                           :precision => 12, :scale => 8
       t.timestamps
     end
-    add_index :geo_regioning_levels, [:parent_type, :parent_id], :name => 'level_parent_idx'
+    add_index :geo_regioning_levels,:parent_id, :name => 'level_parent_idx'
     add_index :geo_regioning_levels, [:geo_latitude,:geo_longitude], :name => 'level_geo_idx'
     create_table :geo_regioning_postcodes do |t|
       t.string  :code, :length => 12
-      t.string  :parent_type
       t.integer :parent_id
       t.integer :country_id
       t.decimal   :geo_latitude,                            :precision => 12, :scale => 8
       t.decimal   :geo_longitude,                           :precision => 12, :scale => 8
       t.timestamps
     end
-    add_index :geo_regioning_postcodes, [:parent_type, :parent_id], :name => 'postcode_parent_idx'
+    add_index :geo_regioning_postcodes, :parent_id, :name => 'postcode_parent_idx'
     add_index :geo_regioning_postcodes, [:geo_latitude,:geo_longitude], :name => 'postcode_geo_idx'
     create_table :geo_regioning_postcode_maps do |t|
       t.integer   :postcode_id
