@@ -4,7 +4,7 @@ class GeoRegioning::Level < GeoRegioning::Base
   has_many :postcode_maps, :as => :postcodable, :class_name => 'GeoRegioning::PostcodeMap'
   has_many :postcodes, :through => :postcode_maps, :class_name => 'GeoRegioning::Postcode'
   belongs_to :parent, :polymorphic => true, :counter_cache => true
-  has_many :children, :as => :parent, :class_name => 'GeoRegioning::Level'
+  has_many :levels, :as => :parent, :class_name => 'GeoRegioning::Level'
 
   belongs_to :country, :class_name => 'GeoRegioning::Country'
 
