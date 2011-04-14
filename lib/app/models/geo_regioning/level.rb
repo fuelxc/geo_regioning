@@ -3,7 +3,7 @@ class GeoRegioning::Level < GeoRegioning::Base
 
   has_many :postcode_maps, :as => :postcodable, :class_name => 'GeoRegioning::PostcodeMap'
   has_many :postcodes, :through => :postcode_maps, :class_name => 'GeoRegioning::Postcode'
-  belongs_to :parent, :polymorphic => true
+  belongs_to :parent, :polymorphic => true, :counter_cache => true
   has_many :children, :as => :parent, :class_name => 'GeoRegioning::Level'
 
   belongs_to :country, :class_name => 'GeoRegioning::Country'
@@ -30,11 +30,26 @@ class GeoRegioning::Level < GeoRegioning::Base
     }
   }
   
+  named_scope :find_by_name, lambda{|name|
+    {
+      :conditions => ['(geo_regioning_levels.long_name = ? OR geo_regioning_levels.short_name = ?)', name, name]
+    }
+  }
+
+  named_scope :find_by_name, lambda{|name|
+    name = "#{name}%"
+    {
+      :conditions => ['(geo_regioning_levels.long_name LIKE ? OR geo_regioning_levels.short_name LIKE ?)', name, name]
+    }
+  }
+   
   named_scope :find_like_name_and_postcode, lambda{|name,postcode|
     name = "#{name}%"
     {:joins => :postcodes,
     :conditions => ["(geo_regioning_levels.long_name LIKE ? OR geo_regioning_levels.short_name LIKE ?) AND geo_regioning_postcodes.code = ?", name, name, postcode]}
   }
+  
+  named_scope :deepest, {:conditions => {:levels_count => 0}}
 
   before_validation :set_country
   before_validation :set_depth
