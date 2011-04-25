@@ -57,6 +57,11 @@ mesa = az.cities.find_by_name('Mesa')
 #some other geokit model
 Property.find_within(5, :origin => mesa.lat_long)
 
+#non geokit model that uses addresses
+cities = mesa.others_within(5) + [mesa]
+
+Property.all(:conditions => ["city IN (#{cities.collect(&:name).join(',')})")
+
 
 Coming Soon
 ===========

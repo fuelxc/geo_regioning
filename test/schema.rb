@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(:version => 0) do
       t.string  :short_name, :length => 10
       t.string  :long_code
       t.string  :short_code, :length => 2
-      t.string :parent_type
       t.integer :parent_id
       t.integer :depth, :length => 2, :null => false, :default => 1
       t.integer :country_id, :null => false
@@ -26,7 +25,14 @@ ActiveRecord::Schema.define(:version => 0) do
       t.decimal   :geo_longitude,                           :precision => 12, :scale => 8
       t.timestamps
   end
+
+  add_column :geo_regioning_levels, :levels_count, :integer, :default => 0
+  add_column :geo_regioning_countries, :levels_count, :integer, :default => 0
+  add_index  :geo_regioning_levels, :levels_count, :name => 'deepest_idx'
+  add_column :geo_regioning_levels, :lft, :integer, :null => false, :default => 0
+  add_column :geo_regioning_levels, :rgt, :integer, :null => false, :default => 0
   add_index :geo_regioning_levels, :parent_id, :name => 'level_parent_idx'
+  add_index  :geo_regioning_levels, [:lft,:rgt], :name => 'lft_rgt_idx'
   add_index :geo_regioning_levels, [:geo_latitude,:geo_longitude], :name => 'level_geo_idx'
 
   drop_table :geo_regioning_postcodes

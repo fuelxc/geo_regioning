@@ -84,7 +84,8 @@ class GeoRegioning::Level < GeoRegioning::Base
     if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]['exclude_from_geocode']
       self.parent.try(:address)
     else
-      [self.name, self.parent.try(:address), self.country.address].compact.join(', ')
+      parent_address = self.parent.try(:address) || self.country.iso_3166
+      [self.name, parent_address].compact.join(', ')
     end
   end
 

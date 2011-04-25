@@ -5,7 +5,7 @@ class GeoRegioningPostcodeTest < Test::Unit::TestCase
 
   def test_postcode
     country = GeoRegioning::Country.create(:iso_3166 => 'AU')
-    level = GeoRegioning::Level.create(:long_name => 'Victoria', :country => country, :parent => country)
+    level = GeoRegioning::Level.create(:long_name => 'Victoria', :country => country)
     postcode = GeoRegioning::Postcode.create(:code => 3806, :country => country)
     level.postcodes << postcode
 

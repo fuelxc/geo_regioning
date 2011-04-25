@@ -11,7 +11,7 @@ class GeoRegioningCountryTest < Test::Unit::TestCase
 
   def test_country_level1_meta_finders
     country = GeoRegioning::Country.create(:iso_3166 => 'AU', :name => 'Australia' )
-    level1 = GeoRegioning::Level.create(:country => country, :long_name => 'Victoria', :short_code => 'VIC', :parent => country)
+    level1 = GeoRegioning::Level.create(:country => country, :long_name => 'Victoria', :short_code => 'VIC')
     level2 = GeoRegioning::Level.create(:country => country, :long_name => 'Casey', :parent => level1)
     level3 = GeoRegioning::Level.create(:country => country, :long_name => 'Berwick', :parent => level2)
 
@@ -25,7 +25,7 @@ class GeoRegioningCountryTest < Test::Unit::TestCase
 
   def test_country_level2_meta_finders
     country = GeoRegioning::Country.create(:iso_3166 => 'AU', :name => 'Australia' )
-    level1 = GeoRegioning::Level.create(:depth => 1, :country => country, :long_name => 'Victoria', :short_code => 'VIC', :parent => country)
+    level1 = GeoRegioning::Level.create(:depth => 1, :country => country, :long_name => 'Victoria', :short_code => 'VIC')
     level2 = GeoRegioning::Level.create(:depth => 2, :country => country, :long_name => 'Casey', :parent => level1)
     level3 = GeoRegioning::Level.create(:depth => 3, :country => country, :long_name => 'Berwick', :parent => level2)
 
@@ -39,7 +39,7 @@ class GeoRegioningCountryTest < Test::Unit::TestCase
 
   def test_country_level3_meta_finders
     country = GeoRegioning::Country.create(:iso_3166 => 'AU', :name => 'Australia' )
-    level1 = GeoRegioning::Level.create(:depth => 1, :country => country, :long_name => 'Victoria', :short_code => 'VIC', :parent => country)
+    level1 = GeoRegioning::Level.create(:depth => 1, :country => country, :long_name => 'Victoria', :short_code => 'VIC')
     level2 = GeoRegioning::Level.create(:depth => 2, :country => country, :long_name => 'Casey', :parent => level1)
     level3 = GeoRegioning::Level.create(:depth => 3, :country => country, :long_name => 'Berwick', :parent => level2)
 
