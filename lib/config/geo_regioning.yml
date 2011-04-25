@@ -1,12 +1,11 @@
 geokit_options:
-  yahoo: 'ZNNqOjzV34F5h60qHp_1TysfsGxIBjseWV2.O0MR1wApv3oMAvxTDlbRWxP95garVj6443cgaxmGsEQ-'
-  google: 'ABQIAAAABfIm4jkm-97zwZGPWDLK1hRFPpZoRlpQmaBI6n2RvwGfIb4J0BQhuCGq0y-9Y2g6Y61aVH4_kRbKsQ'
+  yahoo: '<yahoo key>'
+  google: '<google key>'
   geocoder_us: false
   geocoder_ca: false
   provider_order:
     - :google
     - :yahoo
-    - :us
   request_timeout: 3
   units: 'miles'
   formula: 'sphere'

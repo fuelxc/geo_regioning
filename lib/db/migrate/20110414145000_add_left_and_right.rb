@@ -5,6 +5,7 @@ class AddLeftAndRight < ActiveRecord::Migration
   end
 
   def self.down
+    remove_index :geo_regioning_levels, :name => :lft_rgt_idx
     remove_column :geo_regioning_levels, :rgt
     remove_column :geo_regioning_levels, :lft
   end
