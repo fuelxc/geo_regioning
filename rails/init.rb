@@ -12,6 +12,7 @@ if defined?(ActionView)
 end
 
 require 'active_support'
+require 'geokit'
 require 'geokit-rails'
 require 'geo_regioning'
 
