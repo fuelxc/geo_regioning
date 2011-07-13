@@ -11,14 +11,25 @@ class GeoRegioning::Country < GeoRegioning::Base
 
   @level_name_depth_map = {}
 
-  def address
-    self.iso_3166 || self.name
+  def to_s(display = :display)
+    address(:display)
+  end
+
+  def address(display = :geocode)
+    unless GeoRegioning.config['country_definitions'][self.iso_3166]["exclude_from_#{display.to_s}"]
+      value_method = GeoRegioning.config['country_definitions'][self.iso_3166]["#{display.to_s}_value"] || "code"
+      self.send(value_method)
+    end
+  end
+
+  def code
+    iso_3166
   end
 
   def level_name_depth_map
     @level_name_depth_map if @level_name_depth_map
     levels_hash = {}
-    GeoRegioning.config['country_definitions'][self.iso_3166].keys.map{|key| levels_hash[GeoRegioning.config['country_definitions'][self.iso_3166][key]['name']] = key}
+    GeoRegioning.config['country_definitions'][self.iso_3166].keys.select{|k| k =~ /^\d+$/}.map{|key| levels_hash[GeoRegioning.config['country_definitions'][self.iso_3166][key]['name']] = key}
     @level_name_depth_map = levels_hash
   end
 

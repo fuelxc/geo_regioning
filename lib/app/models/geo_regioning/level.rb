@@ -88,7 +88,7 @@ class GeoRegioning::Level < GeoRegioning::Base
     if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["exclude_from_#{display.to_s}"]
       self.parent.try(:address, display)
     else
-      parent_address = self.parent.try(:address, display) || self.country.iso_3166
+      parent_address = self.parent.try(:address, display) || self.country.address(display)
       value_method = GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["#{display.to_s}_value"] || "name"
       [self.send(value_method), parent_address].compact.join(', ')
     end
