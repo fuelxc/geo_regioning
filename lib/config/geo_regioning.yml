@@ -12,6 +12,7 @@ country_definitions:
   AU:
     1:
       name: state
+      exclude_from_display: true
     2:
       name: city
       exclude_from_geocode: true

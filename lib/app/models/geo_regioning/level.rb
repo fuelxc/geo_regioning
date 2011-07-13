@@ -80,8 +80,12 @@ class GeoRegioning::Level < GeoRegioning::Base
     @level_name_depth_map = levels_hash
   end
 
-  def address
-    if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]['exclude_from_geocode']
+  def to_s
+    address(:display)
+  end
+
+  def address(display = :geocode)
+    if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["exclude_from_#{display.to_s}"]
       self.parent.try(:address)
     else
       parent_address = self.parent.try(:address) || self.country.iso_3166
