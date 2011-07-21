@@ -44,6 +44,12 @@ class GeoRegioning::Level < GeoRegioning::Base
     }
   }
 
+  named_scope :find_by_code, lambda{|code|
+    {
+      :conditions => ['(geo_regioning_levels.long_code = ? OR geo_regioning_levels.short_code = ?)', code, code]
+    }
+  }
+
   named_scope :find_like_name, lambda{|name|
     name = "#{name}%"
     {
@@ -74,6 +80,7 @@ class GeoRegioning::Level < GeoRegioning::Base
   @level_name_depth_map = {}
 
   def level_name_depth_map
+    return unless self.country
     @level_name_depth_map if @level_name_depth_map
     levels_hash = {}
     GeoRegioning.config['country_definitions'][self.country.iso_3166].keys.select{|k| k.to_s.to_i == k}.map{|key| levels_hash[GeoRegioning.config['country_definitions'][self.country.iso_3166][key]['name']] = key}
@@ -85,8 +92,16 @@ class GeoRegioning::Level < GeoRegioning::Base
   end
 
   def address(display = :geocode)
-    if GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["exclude_from_#{display.to_s}"]
-      self.parent.try(:address, display)
+    if display.to_s.split(/and/).first.gsub(/_/,'') == 'self'
+      #special case where we want self and a specific list
+      levels = display.to_s.split(/and/).collect{|a| a.gsub(/_/,'')}
+      #ditch self
+      levels.shift
+      value_method = GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["#{display.to_s}_value"] || GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["display_value"] || "name"
+      address = [self.send(value_method)]
+      (address + levels.collect{|a| self.send(a).address(:self)}).flatten.compact.join(', ')
+    elsif GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["exclude_from_#{display.to_s}"]
+      self.parent.try(:address, display) || self.country.address(display)
     else
       parent_address = self.parent.try(:address, display) || self.country.address(display)
       value_method = GeoRegioning.config['country_definitions'][self.country.iso_3166][self.depth]["#{display.to_s}_value"] || "name"
@@ -125,7 +140,7 @@ class GeoRegioning::Level < GeoRegioning::Base
   end
 
   def method_missing(method, *args, &block)
-    if level_name_depth_map.keys.include?(method.to_s.singularize)
+      if level_name_depth_map.keys.include?(method.to_s.singularize)
       depth = level_name_depth_map[method.to_s.singularize]
       num_calls = (depth - self.depth).abs
       if self.depth < depth
