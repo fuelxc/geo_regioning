@@ -26,6 +26,10 @@ class GeoRegioning::Country < GeoRegioning::Base
     iso_3166
   end
 
+  def toplevel_depth
+    @toplevel_depth ||= GeoRegioning.config['country_definitions'][self.iso_3166]['toplevel_depth'] rescue 1
+  end
+
   def level_name_depth_map
     @level_name_depth_map if @level_name_depth_map
     levels_hash = {}
