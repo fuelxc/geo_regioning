@@ -60,13 +60,15 @@ Property.find_within(5, :origin => mesa.lat_long)
 #non geokit model that uses addresses
 cities = mesa.others_within(5) + [mesa]
 
+#please don't actually use this.  Great way to have sql injection attack
 Property.all(:conditions => ["city IN (#{cities.collect(&:name).join(',')})")
 
 
 Coming Soon
 ===========
 
-Level Bounds - allow the addition of bounding boxes for regions. eg: Property.find(:all, :bounds => mesa.bounds)
+Level strfmt - allow the passing of parameter much like strftime ie: mesa.strfmt("%s, %T %p") => "Mesa, AZ 85213"
+Level Bounds - allow the addition of bounding boxes for regions. ie: Property.find(:all, :bounds => mesa.bounds)
 Level By Ip  - easily get the lowest subdivision closest to an IP address
 
 
