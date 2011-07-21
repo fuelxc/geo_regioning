@@ -122,7 +122,7 @@ class GeoRegioning::Level < GeoRegioning::Base
   end
   
   def toplevel
-    num_calls = (1 - self.depth)
+    num_calls = (self.country.toplevel_depth - self.depth)
     eval("self#{'.parent'*num_calls}")
   end
 
