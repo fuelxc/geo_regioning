@@ -62,6 +62,7 @@ class GeoRegioningLevelTest < Test::Unit::TestCase
     assert_equal 1, level1.suburbs.length
     assert_equal level3, level1.suburbs.first
 
+    assert_equal level1.toplevel, level1
 
     assert_equal levelA2, levelA3.county
     assert_equal levelA1, levelA2.state
